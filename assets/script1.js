@@ -6,7 +6,7 @@ var specialCase = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 var integerCase = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var passwordLength = " ";
+var masterCase = [];
 
 // Write password to the #password input
 function writePassword() {
@@ -19,36 +19,51 @@ function writePassword() {
 
 // Creates prompts and alerts for password length
 function generatePassword() {
-    var numberCharacters = prompt("How many characters would you like your password to be?")
-    numberCharacters = parseInt(numberCharacters);   
-if (numberCharacters < 8 || numberCharacters > 128) {
-    alert("Number must be between 8 and 128.")
+    var passwordLength = prompt("Choose a password length between 8 and 128 characters.")
+    passwordLength = parseInt(passwordLength);   
+if (passwordLength < 8 || passwordLength > 128) {    
+    alert("Must be a number between 8 and 128.");
+    generatePassword();
+} else if (isNaN (passwordLength)) {
+    alert("Must be a number.");
+    generatePassword();
+}  // Loops twice after incorrect input 
+//https://stackoverflow.com/questions/22306764/javascript-if-statement-within-alert
+//https://stackoverflow.com/questions/69018412/how-to-reload-a-prompt-if-user-selects-the-cancel-button-in-javascript
+
+var lowChar = confirm("Should this password include lower case alphabet?");
+if (lowChar === true) {
+    masterCase = lowerCase.concat(masterCase);
+
+console.log(lowChar)
 }
-if (isNaN (numberCharacters)) {
-    alert("Must be a number.")
+var upChar = confirm("Should this password include upper case alphabet?");
+if (upChar === true) {
+    masterCase = upperCase.concat(masterCase);
 }
+console.log(upChar)
 
-if (specialCharacters) {
-    
+var intChar = confirm("Should this password include numbers?");
+if (intChar === true) {
+    masterCase = integerCase.concat(masterCase);
 }
-var specialCharacters = confirm("Should this password include special characters?");
-console.log(specialCharacters)
+console.log(intChar)
 
-var lowerCharacters = confirm("Should this password include lower case alphabet?");
-console.log(lowerCharacters)
+var specChar = confirm("Should this password include special characters?");
+if (specChar === true) {
+    masterCase = specialCase.concat(masterCase);
+}
+console.log(specChar);
 
-var upperCharacters = confirm("Should this password include upper case alphabet?");
-console.log(upperCharacters)
+// if (lowChar = false && upChar = false && intChar = false && specChar = false)
+console.log(masterCase);
 
-
-var randomPassword = "";
 for (i = 0; i <= passwordLength; i++) {
-    var index = Math.floor(passwordCharacterContainer.length * Math.random()));
- randomPassword += passwordCharacerContainer[index];
- console.log(randomPassword);
- return randomPassword;
+    var index = Math.floor(masterCase.length * Math.random()));
+ randomPassword += masterCase[index];
+//  return randomPassword;
 }
-cocantonate each for loop
+
 
 
 
@@ -64,9 +79,8 @@ cocantonate each for loop
 
 //     return "Lydia"
 // }
+    return masterCase;
 
-
-    console.log(numberCharacters);
     console.log(typeof numberCharacters)
 }
 
