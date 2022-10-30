@@ -25,14 +25,17 @@ function generatePassword() {
     var passwordLength = prompt("Choose a password length between 8 and 128 characters.")
     passwordLength = parseInt(passwordLength);
     if (passwordLength < 8 || passwordLength > 128) {
-        alert("Must be a number between 8 and 128.");
-        generatePassword();
+        alert("Must be a number between 8 and 128. Please generate password again.");
+        return;
     } else if (isNaN(passwordLength)) {
-        alert("Must be a number.");
-        generatePassword();
-        return; // tried to stop looping, reduced by 1 iteration
+        alert("Must be a number. Please generate password again");
+        return;
+    } 
+    if (passwordLength === null) {
+        return;
     }
-    // Loops twice after incorrect input 
+        //do you wish to continue? if canceled 
+    
     // break? https://flexiple.com/javascript/javascript-exit-functions/
     // https://stackoverflow.com/questions/69018412/how-to-reload-a-prompt-if-user-selects-the-cancel-button-in-javascript
 
@@ -40,29 +43,29 @@ function generatePassword() {
     if (lowChar === true) {
         masterCase = lowerCase.concat(masterCase);
 
-        console.log(lowChar)
+        //console.log(lowChar)
     }
     var upChar = confirm("Should this password include upper case alphabet?");
     if (upChar === true) {
         masterCase = upperCase.concat(masterCase);
     }
-        console.log(upChar)
+        //console.log(upChar)
 
     var intChar = confirm("Should this password include numbers?");
     if (intChar === true) {
         masterCase = integerCase.concat(masterCase);
     }
-        console.log(intChar)
+        //console.log(intChar)
 
     var specChar = confirm("Should this password include special characters?");
     if (specChar === true) {
         masterCase = specialCase.concat(masterCase);
     }
-        console.log(specChar);
+        //console.log(specChar);
 
     // if (lowChar = false && upChar = false && intChar = false && specChar = false) {
     //     alert("You must select at least 1 character type to create password");
-    //     generatePassword();
+    //     return generatePassword();
     // }
 
     // For loop to pick random characters
