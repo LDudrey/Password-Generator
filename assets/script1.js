@@ -17,7 +17,7 @@ function writePassword() {
 
 }
 
-
+// ?? Should passwordLength be global variable. Have seperate function for get password length?
 
 // Creates prompts and alerts for password length
 function generatePassword() {
@@ -60,7 +60,10 @@ function generatePassword() {
     }
         console.log(specChar);
 
-    // if (lowChar = false && upChar = false && intChar = false && specChar = false)
+    // if (lowChar = false && upChar = false && intChar = false && specChar = false) {
+    //     alert("You must select at least 1 character type to create password");
+    //     generatePassword();
+    // }
 
     // For loop to pick random characters
     for (i = 0; i < passwordLength; i++) {
