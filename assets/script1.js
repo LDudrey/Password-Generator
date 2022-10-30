@@ -64,23 +64,6 @@ for (i = 0; i <= passwordLength; i++) {
 //  return randomPassword;
 }
 
-
-
-
-
-//Inputs data into password text box
-// if (numberCharacters > 8 && numberCharacters < 128) {
-//     confirm("Should this include special characters?")
-//     //if(true) define variable
-//     if (specialCharacter === true) {
-//         specialCharacter =  
-//     }
-//     //if(false)
-
-//     return "Lydia"
-// }
-    return masterCase;
-
     console.log(typeof numberCharacters)
 }
 
