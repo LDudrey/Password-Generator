@@ -8,6 +8,10 @@ Secure passwords are a key component of security within any company. Employees c
 https://ldudrey.github.io/Password-Generator/
 
 Please click the link above to start the random password generator. Once browser is open please click the "Generate Password" button.
+![The Password Generator application displays a red button to "Generate Password".](./assets/images/Password%20Generator%20Button.png)
+
+The follow prompt will show. You must select a number between 8 and 128 characters. Otherwise you will be prompted to try again.
+
 
 ## Credits
 
