@@ -1,16 +1,13 @@
 # Password Generator
-Welcome to my JavaScript Password Generator! 
+Welcome to JavaScript Password Generator.
 
 ## Description
-Passwords are a common part of day to day life. Most  As a future web developer I need a portfolio to showcase my skills and talent to future employers. An having a portfolio with deployed web applications is crucial to the success of my career search after bootcamp.
-
+Secure passwords are a key component of security within any company. Employees can generate a random password based of selected criteria.
 ## Usage
 
 https://ldudrey.github.io/Password-Generator/
 
-Below I'm showing the responsiveness of the webpage for varying devices. The images show the elements responding to decreasing size of viewscreens by stacking elements on top of each other. 
-
-
+Please click the link above to start the random password generator. Once browser is open please click the "Generate Password" button.
 
 ## Credits
 
