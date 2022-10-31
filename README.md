@@ -2,7 +2,7 @@
 Welcome to JavaScript Password Generator.
 
 ## Description
-Secure passwords are a key component of security within any company. This application is written for employees to use as a way to generate a random password based off their selected character criteria.
+Secure passwords are a key component of security within any company. This application is written for employees to use to generate a secure random password based off their selected character criteria.
 
 ## Usage
 
